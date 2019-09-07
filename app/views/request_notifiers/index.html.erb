@@ -1,0 +1,33 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Request Notifiers</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Todo name</th>
+      <th>Urgency</th>
+      <th>Description</th>
+      <th>Photo</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @request_notifiers.each do |request_notifier| %>
+      <tr>
+        <td><%= request_notifier.todo_name %></td>
+        <td><%= request_notifier.urgency %></td>
+        <td><%= request_notifier.description %></td>
+        <td><%= request_notifier.photo %></td>
+        <td><%= link_to 'Show', request_notifier %></td>
+        <td><%= link_to 'Edit', edit_request_notifier_path(request_notifier) %></td>
+        <td><%= link_to 'Destroy', request_notifier, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Request Notifier', new_request_notifier_path %>

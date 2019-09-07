@@ -1,0 +1,2 @@
+class RequestNotifier < ApplicationRecord
+end

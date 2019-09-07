@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Todo name:</strong>
+  <%= @request_notifier.todo_name %>
+</p>
+
+<p>
+  <strong>Urgency:</strong>
+  <%= @request_notifier.urgency %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @request_notifier.description %>
+</p>
+
+<p>
+  <strong>Photo:</strong>
+  <%= @request_notifier.photo %>
+</p>
+
+<%= link_to 'Edit', edit_request_notifier_path(@request_notifier) %> |
+<%= link_to 'Back', request_notifiers_path %>
